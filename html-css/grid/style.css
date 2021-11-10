@@ -1,0 +1,61 @@
+html, body {
+    margin: 0 5vh;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 5vh 65vh 10vh;
+    grid-gap: 5px;
+    grid-template-areas: "header header"
+                         "nav    nav"
+                         "main   aside"
+                         "footer footer";
+}
+
+header {
+    background: yellow;
+    /* grid-column-start: 1; /* o header começará na linha vertical virtual 1 */
+    /* grid-column-end: 3; /* o header terminará na linha vertical virtual 3 */
+    grid-area: header;
+}
+
+nav {
+    background: white;
+    grid-area: nav;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background: blue;
+    /* grid-column-start: 1; /* o main começará na linha vertical virtual 1 */
+    /* grid-column-end: 2; /* o main terminará na linha virtual vertical 2 */
+    grid-area: main;
+    border-radius: 7px;
+}
+
+aside {
+    background: green;
+    /* grid-column-start: 2; /* o aside começará na linha vertical virtual 2 */
+    /* grid-column-end: 3; /* o aside terminará na linha vertical virtual 3 */
+    grid-area: aside;
+    border-radius: 7px;
+}
+
+footer {
+    background: red;
+    /* grid-column-start: 1; /* o footer começará na linha vertical virtual 1 */
+    /* grid-column-end: 3; /* o footer terminará na linha vertical virtual 3*/
+    grid-area: footer;
+}
