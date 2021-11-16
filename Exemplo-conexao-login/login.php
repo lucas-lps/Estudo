@@ -1,5 +1,5 @@
 <?php
-    include("c_usuario");
+    include("c_usuario.php");
 
     $usuario = $_POST['usuario'];
     $senha   = $_POST['senha'];
