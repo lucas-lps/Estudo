@@ -1,0 +1,83 @@
+CONFIGURANDO O GIT
+$ git config --global user.name "Lucas Lopes"
+$ git config --global user.email "lucaslpsmacedo@gmail.com"
+
+SSH
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+COMANDOS
+$ git help <comando> --> para saber mais sobre um comando
+$ pwd --> exibe o local onde você está
+$ cd /c --> trocar de local
+$ ls --> lista todoss os arquivos e diretórios do local onde você está
+$ mkdir <nome da pasta> --> cria uma pasta
+$ touch <nome do arquivo.extensao> --> cria um arquivo
+$ git init <nome do repositório> --> cria um novo repositório
+$ git remote add origin <SSH do repositório remoto> --> Sincroniza o repositório local com o repositório remoto
+$ <nome do editor> <nome do arquivo> --> cria um novo arquivo
+$ git add <nome do arquivo> --> adiciona o arquivo na área de preparação para ser comitado posteriormente
+$ git add . --> adiciona tudo do diretório atual na área de preparação
+$ git commit --> comita os arquivos que estavam na área de preparação
+$ git commit -m "<mensagem>" --> outra maneira de fazer commit e já adicionar uma mensagem
+$ git status --> ver status
+$ git log --> ver os commits que já foram feitos
+$ git push --> envia os arquivos para o repositório criado no github
+$ git diff HEAD~1 --> ver diferenças entre o estado atual e o último commit
+$ git diff <commit1> <commit2>
+$ git clone <url> --> baixa um repositório
+$ git pull --> baixa as alterações do repositório remoto
+$ git checkout <commit> <arquivo> --> permite ver como um arquivo ou todo o repositório estava em um determinado commit
+$ git checkout master --> volta para o estado atual
+$ git checkout -- <nome do arquivo> ou . --> desfaz todas as alterações que não estejam no stage (vermelho) desde o último commit
+$ git checkout HEAD -- <nome do arquivo> ou . --> desfaz todas as alterações desde o último commit incluuindo o stage
+$ git revert <commit> --> cria um commit que desfaz as alterações do commit especificado
+$ git reset <commit> --> reseta o repositório para um determinado commit
+$ git reset --hard <commit> --> reseta e remove todas as alterações
+
+*************************************************************************************************************************
+
+Branch = é uma lista de commits; representa ramificações no repositório; branch master é a padrão
+
+$ git branch --> exibir branch atual
+$ git branch <nome da branch> --> cria uma nova branch
+$ git branch -d <nome da branch> --> deleta uma branch
+$ git checkout <nome da branch> --> trocar de branch
+$ git push -u origin <nome da branch> --> cria a nova branch no repositório remoto (origin) do github
+
+MERGE
+
+$ git merge <nome da branch>
+- consertar conflitos
+$ git add .
+$ git commit
+$ git push
+
+git pull origin master --allow-unrelated-histories --> fazer merge de 2 projetos com históricos diferentes (remoto e local)
+
+REBASE
+
+- fazer commit na master
+- fazer commit em outra branch
+$ git rebase master
+- consertar os conflitos
+$ git add .
+$ git rebase --continue
+$ git push
+
+FETCH
+
+- entre em outro repositório
+- faça um commit
+$ git fetch
+$ git rebase
+- consertar os conflitos
+$ git add .
+$ git rebase --continue
+$ git push
+
+Escrever na mensagem de commit: Closes #1. --> Fecha a issue 1
+
+*************************************************************************************************************************
+
+$ code .gitignore --> escrever extensões e pastas a serem ignorados pelo commit
+$ git commit --amend --> ao invés de fazer um novo commit, adiciona-o ao commit anterior (importante nnão ter dado push ainda)
