@@ -1,0 +1,77 @@
+body {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #003141;
+	background-color: #e7e7dd;
+}
+
+ul.menu, .menu li, .menu a { 
+	margin:0;
+	padding:0; 
+	list-style:none; 
+	text-decoration:none;
+}
+
+ul.menu ul { 
+	position:absolute; 
+	display:none; 
+}
+
+ul.menu { 
+	float:left; 
+	padding:0 5px; 
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.menu li { 
+	float:left; 
+	width:auto; 
+	position:relative;
+}
+
+.menu li a { 
+	display:block; 
+	padding:0 20px; 
+	line-height:45px; 
+	height:45px; 
+	float:left; 
+	transition:all 0.1s linear; 
+	border-radius:5px; 
+	color: #003141;
+	font-weight: bold;
+}
+
+.menu li:hover > ul.submenu{ 
+	display:block;
+	top:45px; 
+	left:0; 
+	padding:5px; 
+	width:255px; 
+	border-radius:0 0 5px 5px;
+}
+
+.menu ul.submenu a{  
+	width:215px; 
+	padding:0 20px; 
+	border-radius:5px;  
+}
+
+.tg .table-top{
+	color: white;
+	font-size:12px;
+	padding:5px 5px;
+	background-color: #003141;
+}
+
+.tg .table-list{
+	font-size:12px;
+	padding:5px 5px;
+	border: 1px solid #838385;
+	background-color: white;
+	color: #003141;
+}
+
+a {
+	text-decoration: underline;
+	color: green;
+}
